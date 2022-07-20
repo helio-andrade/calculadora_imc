@@ -9,6 +9,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      debugShowCheckedModeBanner: false,
       home: BmiCalculator(),
     );
   }
@@ -33,6 +34,7 @@ class _BmiCalculatorState extends State<BmiCalculator> {
     return Container(
       child: Scaffold(
         appBar: AppBar(
+          centerTitle: true,
           title: Text(
             "Índice de Massa Corporal",
             style: TextStyle(
@@ -57,7 +59,7 @@ class _BmiCalculatorState extends State<BmiCalculator> {
           child: Padding(
             padding: const EdgeInsets.all(20.0),
             child: Column(
-              mainAxisAlignment: MainAxisAlignment.start,
+              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 SizedBox(
